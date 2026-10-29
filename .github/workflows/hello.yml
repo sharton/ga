@@ -1,0 +1,8 @@
+name: Hello
+on: [push, workflow_dispatch]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Привет от ${{ github.actor }}!"
+      - run: uname -a && python3 --version
